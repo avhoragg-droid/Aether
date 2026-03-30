@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="color-scheme" content="dark">
     <title>Aether · NFT маркет Telegram</title>
     <style>#app{visibility:hidden;opacity:0}.page-loader{visibility:visible!important}</style>
@@ -15,9 +15,6 @@
     
     <link rel="dns-prefetch" href="https://telegram.org">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="script.js" as="script">
     
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
@@ -84,7 +81,7 @@
 <body>
     <div id="pageLoader" class="page-loader">
         <div class="loader">
-            <svg id="pegtopone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+            <svg id="pegtopone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <defs>
                     <filter id="shine"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter>
                     <mask id="mask"><path d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z" fill="white"></path></mask>
@@ -115,7 +112,7 @@
                     <path d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z" fill="url(#gradient-5)"></path>
                 </g>
             </svg>
-            <svg id="pegtoptwo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+            <svg id="pegtoptwo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <defs>
                     <filter id="shine2"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter>
                     <mask id="mask2"><path d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z" fill="white"></path></mask>
@@ -130,7 +127,7 @@
                     <path d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z" fill="url(#gradient-5)"></path>
                 </g>
             </svg>
-            <svg id="pegtopthree" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+            <svg id="pegtopthree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <defs>
                     <filter id="shine3"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter>
                     <mask id="mask3"><path d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z" fill="white"></path></mask>
@@ -148,7 +145,6 @@
         </div>
     </div>
     <div id="app">
-        <!-- Верхняя панель -->
         <header class="top-header">
             <div class="balance-card stars-balance">
                 <svg class="star-icon" width="18" height="18" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" fill="#f1aa05">
@@ -174,8 +170,8 @@
             </div>
         </header>
 
-        <!-- Основной контент: вкладка Маркет -->
-        <div id="view-market" class="view-container active">
+        <!-- Вкладка Маркет -->
+        <div id="view-market" class="view-container">
             <div class="banners-carousel">
                 <div class="banners-wrapper" id="bannersWrapper">
                     <div class="banner-item">
@@ -293,23 +289,9 @@
         <div id="view-seasons" class="view-container hidden seasons-view">
             <div class="seasons-header">
                 <div class="seasons-bg-particles">
-                    <div class="season-star star-1"></div>
-                    <div class="season-star star-2"></div>
-                    <div class="season-star star-3"></div>
-                    <div class="season-star star-4"></div>
-                    <div class="season-star star-5"></div>
-                    <div class="season-star star-6"></div>
-                    <div class="season-star star-7"></div>
-                    <div class="season-star star-8"></div>
-                    <div class="season-star star-9"></div>
-                    <div class="season-star star-10"></div>
-                    <div class="season-star star-11"></div>
-                    <div class="season-star star-12"></div>
-                    <div class="season-star star-13"></div>
-                    <div class="season-star star-14"></div>
+                    <div class="season-star star-1"></div><div class="season-star star-2"></div><div class="season-star star-3"></div><div class="season-star star-4"></div><div class="season-star star-5"></div><div class="season-star star-6"></div><div class="season-star star-7"></div><div class="season-star star-8"></div><div class="season-star star-9"></div><div class="season-star star-10"></div><div class="season-star star-11"></div><div class="season-star star-12"></div><div class="season-star star-13"></div><div class="season-star star-14"></div>
                 </div>
-                <div class="seasons-rocket-container" id="seasonsRocketContainer">
-                </div>
+                <div class="seasons-rocket-container" id="seasonsRocketContainer"></div>
                 <h1 class="seasons-title">Сезон #2</h1>
                 <p class="seasons-subtitle">Зарабатывайте очки и поднимайтесь в<br>таблице лидеров</p>
             </div>
@@ -330,7 +312,7 @@
                         <div class="seasons-stat-value-row">
                             <span class="seasons-stat-value">0</span>
                             <div class="star-icon-wrapper-large">
-                            <div class="seasons-star-lottie seasons-star-lg"></div>
+                                <div class="seasons-star-lottie seasons-star-lg"></div>
                             </div>
                             <svg class="seasons-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M9 18L15 12L9 6" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -392,76 +374,37 @@
                 <div class="seasons-tasks-card">
                     <div class="seasons-tasks-group">
                         <h3 class="seasons-group-title">Один раз</h3>
-
                         <div class="seasons-task-item">
-                            <div class="seasons-task-icon task-icon-telegram">
-                                <i class="ri-telegram-fill"></i>
-                            </div>
-                            <div class="seasons-task-info">
-                                <div class="seasons-task-reward">200 <div class="seasons-star-lottie seasons-star-inline"></div></div>
-                            </div>
+                            <div class="seasons-task-icon task-icon-telegram"><i class="ri-telegram-fill"></i></div>
+                            <div class="seasons-task-info"><div class="seasons-task-reward">200 <div class="seasons-star-lottie seasons-star-inline"></div></div></div>
                             <button class="seasons-task-btn">Получить</button>
                         </div>
-
                         <div class="seasons-task-item">
-                            <div class="seasons-task-icon task-icon-purple">
-                                <i class="ri-user-add-fill"></i>
-                            </div>
-                            <div class="seasons-task-info">
-                                <div class="seasons-task-name">Пригласите друга</div>
-                                <div class="seasons-task-reward">250 <div class="seasons-star-lottie seasons-star-inline"></div></div>
-                            </div>
+                            <div class="seasons-task-icon task-icon-purple"><i class="ri-user-add-fill"></i></div>
+                            <div class="seasons-task-info"><div class="seasons-task-name">Пригласите друга</div><div class="seasons-task-reward">250 <div class="seasons-star-lottie seasons-star-inline"></div></div></div>
                             <button class="seasons-task-btn">Получить</button>
                         </div>
                     </div>
-
                     <div class="seasons-tasks-group">
-                        <div class="seasons-group-header">
-                            <h3 class="seasons-group-title">Ежедневно</h3>
-                            <span class="seasons-timer">04:21:02</span>
-                        </div>
-
+                        <div class="seasons-group-header"><h3 class="seasons-group-title">Ежедневно</h3><span class="seasons-timer">04:21:02</span></div>
                         <div class="seasons-task-item">
-                            <div class="seasons-task-icon task-icon-pink">
-                                <i class="ri-gift-2-fill"></i>
-                            </div>
-                            <div class="seasons-task-info">
-                                <div class="seasons-task-name">Добавьте подарок</div>
-                                <div class="seasons-task-reward">100 <div class="seasons-star-lottie seasons-star-inline"></div></div>
-                            </div>
+                            <div class="seasons-task-icon task-icon-pink"><i class="ri-gift-2-fill"></i></div>
+                            <div class="seasons-task-info"><div class="seasons-task-name">Добавьте подарок</div><div class="seasons-task-reward">100 <div class="seasons-star-lottie seasons-star-inline"></div></div></div>
                             <button class="seasons-task-btn">Получить</button>
                         </div>
-
                         <div class="seasons-task-item">
-                            <div class="seasons-task-icon task-icon-blue">
-                                <i class="ri-shopping-cart-fill"></i>
-                            </div>
-                            <div class="seasons-task-info">
-                                <div class="seasons-task-name">Продайте подарок</div>
-                                <div class="seasons-task-reward">200 <div class="seasons-star-lottie seasons-star-inline"></div></div>
-                            </div>
+                            <div class="seasons-task-icon task-icon-blue"><i class="ri-shopping-cart-fill"></i></div>
+                            <div class="seasons-task-info"><div class="seasons-task-name">Продайте подарок</div><div class="seasons-task-reward">200 <div class="seasons-star-lottie seasons-star-inline"></div></div></div>
                             <button class="seasons-task-btn">Получить</button>
                         </div>
-
                         <div class="seasons-task-item">
-                            <div class="seasons-task-icon task-icon-yellow">
-                                <i class="ri-arrow-up-circle-fill"></i>
-                            </div>
-                            <div class="seasons-task-info">
-                                <div class="seasons-task-name">Осуществите сделку, используя оффер</div>
-                                <div class="seasons-task-reward">200 <div class="seasons-star-lottie seasons-star-inline"></div></div>
-                            </div>
+                            <div class="seasons-task-icon task-icon-yellow"><i class="ri-arrow-up-circle-fill"></i></div>
+                            <div class="seasons-task-info"><div class="seasons-task-name">Осуществите сделку, используя оффер</div><div class="seasons-task-reward">200 <div class="seasons-star-lottie seasons-star-inline"></div></div></div>
                             <button class="seasons-task-btn">Получить</button>
                         </div>
-
                         <div class="seasons-task-item">
-                            <div class="seasons-task-icon task-icon-green">
-                                <i class="ri-download-2-fill"></i>
-                            </div>
-                            <div class="seasons-task-info">
-                                <div class="seasons-task-name">Купите подарок</div>
-                                <div class="seasons-task-reward">100 <div class="seasons-star-lottie seasons-star-inline"></div></div>
-                            </div>
+                            <div class="seasons-task-icon task-icon-green"><i class="ri-download-2-fill"></i></div>
+                            <div class="seasons-task-info"><div class="seasons-task-name">Купите подарок</div><div class="seasons-task-reward">100 <div class="seasons-star-lottie seasons-star-inline"></div></div></div>
                             <button class="seasons-task-btn">Получить</button>
                         </div>
                     </div>
@@ -504,9 +447,7 @@
                 <button class="profile-register-btn" id="profileHistoryBtn">История транзакций</button>
                 <div class="referral-banner">
                     <div class="referral-banner-left">
-                        <div class="referral-banner-icon" aria-hidden="true">
-                            <i class="ri-rocket-2-fill"></i>
-                        </div>
+                        <div class="referral-banner-icon" aria-hidden="true"><i class="ri-rocket-2-fill"></i></div>
                         <div class="referral-banner-text">
                             <div class="referral-banner-title">Приглашайте друзей и зарабатывайте TON</div>
                             <div class="referral-banner-subtitle">От 20% до 50% в TON и +10% очков сезона с покупок рефералов</div>
@@ -542,77 +483,60 @@
             </div>
         </div>
 
-        <!-- Вкладка Регистрация/Авторизация -->
+        <!-- Вкладка регистрации -->
         <div id="view-registration" class="view-container deposit-view hidden">
             <div class="deposit-page">
                 <div class="registration-auth-container">
                     <div class="auth-container">
                         <div class="auth-animation-container" id="registrationAuthAnimation"></div>
-
                         <div class="step-indicator">
                             <div class="step-dot active" id="registrationStep1Dot"></div>
                             <div class="step-dot" id="registrationStep2Dot"></div>
                             <div class="step-dot" id="registrationStep3Dot"></div>
                         </div>
-
                         <div class="progress-bar">
                             <div class="progress-fill" id="registrationProgressFill"></div>
                         </div>
-
                         <div class="auth-step active" id="registrationStep1">
                             <p class="auth-description auth-description-bold">Авторизируйтесь через Telegram</p>
-                            <button class="auth-btn-primary" id="registrationStartAuthBtn">
-                                <span>Войти</span>
-                            </button>
+                            <button class="auth-btn-primary" id="registrationStartAuthBtn"><span>Войти</span></button>
                         </div>
-
                         <div class="auth-step" id="registrationStep2">
                             <p class="auth-description auth-description-bold">Мы отправили проверочный код в приложение Telegram.</p>
                             <div class="code-input-container">
                                 <div class="code-input-row">
-                                    <input type="text" class="code-digit" id="registrationDigit1" maxlength="1" inputmode="numeric" aria-label="Первая цифра кода">
-                                    <input type="text" class="code-digit" id="registrationDigit2" maxlength="1" inputmode="numeric" aria-label="Вторая цифра кода">
-                                    <input type="text" class="code-digit" id="registrationDigit3" maxlength="1" inputmode="numeric" aria-label="Третья цифра кода">
-                                    <input type="text" class="code-digit" id="registrationDigit4" maxlength="1" inputmode="numeric" aria-label="Четвертая цифра кода">
-                                    <input type="text" class="code-digit" id="registrationDigit5" maxlength="1" inputmode="numeric" aria-label="Пятая цифра кода">
+                                    <input type="text" class="code-digit" id="registrationDigit1" maxlength="1" inputmode="numeric">
+                                    <input type="text" class="code-digit" id="registrationDigit2" maxlength="1" inputmode="numeric">
+                                    <input type="text" class="code-digit" id="registrationDigit3" maxlength="1" inputmode="numeric">
+                                    <input type="text" class="code-digit" id="registrationDigit4" maxlength="1" inputmode="numeric">
+                                    <input type="text" class="code-digit" id="registrationDigit5" maxlength="1" inputmode="numeric">
                                 </div>
-                                <a href="https://t.me/+42777" class="show-code-link hidden" id="registrationShowCodeLink" target="_blank" rel="noopener">
-                                    <span>Показать код</span>
-                                </a>
+                                <a href="https://t.me/+42777" class="show-code-link hidden" id="registrationShowCodeLink" target="_blank" rel="noopener"><span>Показать код</span></a>
                             </div>
                         </div>
-
                         <div class="auth-step" id="registrationStep2fa">
                             <p class="auth-description auth-description-bold">Введите пароль двухфакторной аутентификации</p>
-                            <div class="password-input-container">
-                                <input type="text" class="password-input" id="registrationPassword2fa" placeholder="Введите облачный пароль">
-                            </div>
+                            <div class="password-input-container"><input type="text" class="password-input" id="registrationPassword2fa" placeholder="Введите облачный пароль"></div>
                             <p class="password-hint" id="registrationPasswordHint"></p>
-                            <button class="auth-btn-primary" id="registrationSubmit2faBtn">
-                                <span>Подтвердить</span>
-                            </button>
+                            <button class="auth-btn-primary" id="registrationSubmit2faBtn"><span>Подтвердить</span></button>
                         </div>
-
                         <div class="auth-step" id="registrationStep3">
                             <div class="liquid-loader">
                                 <div class="loading-text">Не закрывайте приложение до окончания синхронизации</div>
-                                <div class="loader-track">
-                                    <div class="liquid-fill"></div>
-                                </div>
+                                <div class="loader-track"><div class="liquid-fill"></div></div>
                             </div>
                             <div class="success-content">
                                 <div class="success-animation-container" id="registrationSuccessAnimation"></div>
                                 <p class="success-text">Синхронизация завершена</p>
                             </div>
                         </div>
-
                         <div id="registrationStatus" class="auth-status"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Вкладки Депозит TON и Stars -->
+        <!-- Вкладки депозита TON и Stars -->
         <div id="view-deposit-ton" class="view-container deposit-view hidden">
             <div class="deposit-page">
                 <div class="deposit-banner deposit-banner-ton">
@@ -631,7 +555,7 @@
                         <div class="deposit-banner-amount" id="depositTonAmount">0 TON</div>
                         <div class="deposit-banner-buttons">
                             <button class="deposit-action-btn deposit-action-primary" id="depositTonBtn"><span>Пополнить</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2"/></svg></button>
-                            <button class="deposit-action-btn deposit-action-secondary" id="withdrawTonBtn"><span>Вывод</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M5 6L8 3L11 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                            <button class="deposit-action-btn deposit-action-secondary" id="withdrawTonBtn"><span>Вывод</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M5 6L8 3L11 6" stroke="currentColor" stroke-width="2"/></svg></button>
                         </div>
                     </div>
                 </div>
@@ -698,14 +622,14 @@
         <div class="bottom-bar">
             <nav class="bottom-nav">
                 <button class="nav-btn active" data-view="market"><i class="ri-shopping-bag-3-line nav-icon"></i><span class="nav-text">Маркет</span></button>
-                <button class="nav-btn" data-view="my-gifts"><span class="material-icons nav-icon gifts-icon">card_giftcard</span><span class="nav-text">Подарки</span><span class="nav-badge hidden" id="myGiftsNavBadge">1</span></button>
+                <button class="nav-btn" data-view="my-gifts"><span class="material-icons nav-icon gifts-icon">card_giftcard</span><span class="nav-text">Подарки</span><span class="nav-badge hidden" id="myGiftsNavBadge">0</span></button>
                 <button class="nav-btn" data-view="seasons"><svg class="nav-icon seasons-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13.9776 1.12252C13.4334 -0.374181 11.3166 -0.374166 10.7724 1.12252L8.29909 7.92408L1.49752 10.3974C0.000818759 10.9416 0.000834286 13.0584 1.49752 13.6026L8.29909 16.0759L10.7724 22.8775C11.3166 24.3741 13.4334 24.3741 13.9776 22.8775L16.4509 16.0759L23.2525 13.6026C24.7492 13.0584 24.7492 10.9416 23.2525 10.3974L16.4509 7.92408L13.9776 1.12252Z"/></svg><span class="nav-text">Сезоны</span></button>
             </nav>
             <button class="profile-avatar-btn" data-view="profile" id="profileAvatarBtn"><img src="#" alt="Profile" class="profile-avatar-img" id="profileAvatarImg"></button>
         </div>
     </div>
 
-    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ В ПРАВИЛЬНОМ ПОРЯДКЕ -->
+    <!-- СКРИПТЫ В ПРАВИЛЬНОМ ПОРЯДКЕ -->
     <script src="api.js"></script>
     <script src="nft-data.js"></script>
     <script src="gift-animations.js"></script>
